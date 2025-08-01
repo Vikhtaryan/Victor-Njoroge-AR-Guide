@@ -56,15 +56,6 @@ git clone https://github.com/Vikhtaryan/Victor-s-Story-Book.git
 
 ---
 
-## Screenshots
-
-![Hero Section](./screenshots/hero-section.png)  
-*Landing hero section with project title and call-to-action button.*
-
-![Navigation Bar](./screenshots/navigation-bar.png)  
-*Accessible and stylish navigation menu with keyboard focus highlight.*
-
----
 
 ## Technologies Used
 
@@ -112,4 +103,5 @@ Feel free to view, learn from, or adapt with proper attribution.
 
 Thank you for visiting my portfolio!  
 If you wish to connect, collaborate, or inquire, please use the contact form or reach out via email.
+
 
