@@ -1,6 +1,10 @@
 # Victor Njoroge | AR Tourism Guide Portfolio
 
-**Live Demo:** [https://github.com/Vikhtaryan/Victor-s-Story-Book](https://github.com/Vikhtaryan/Victor-s-Story-Book)
+## Live Demo
+
+Experience the fully functional portfolio live in your browser. Explore the interactive AR tourism guide showcasing Mombasa’s heritage without any local setup or installation.
+
+[View Live Demo here](https://vikhtaryan.github.io/Victor-s-Story-Book)
 
 ---
 
