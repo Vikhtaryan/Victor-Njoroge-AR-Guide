@@ -58,11 +58,11 @@ git clone https://github.com/Vikhtaryan/Victor-s-Story-Book.git
 
 ## Screenshots
 
-*Add screenshots by placing images inside a `/screenshots` folder and referencing them below:*
+![Hero Section](./screenshots/hero-section.png)  
+*Landing hero section with project title and call-to-action button.*
 
-![Hero Section](./screenshots/hero-section.png)
-![Navigation Bar](./screenshots/navigation-bar.png)
-
+![Navigation Bar](./screenshots/navigation-bar.png)  
+*Accessible and stylish navigation menu with keyboard focus highlight.*
 
 ---
 
@@ -112,3 +112,4 @@ Feel free to view, learn from, or adapt with proper attribution.
 
 Thank you for visiting my portfolio!  
 If you wish to connect, collaborate, or inquire, please use the contact form or reach out via email.
+
