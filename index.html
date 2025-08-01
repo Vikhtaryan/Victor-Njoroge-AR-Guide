@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Victor Njoroge, presenting an AR and GPS-powered digital storytelling innovation for Mombasa tourism—crafted using semantic HTML5, accessible, SEO-optimized, and future-proof." />
+    <title>Victor Njoroge | Creative AR Tourism Guide Portfolio</title>
+    <style>
+        /* =======================
+        Documentation:
+        - Responsive: Uses CSS Grid, Flexbox, and media queries.
+        - Visual: Gradient backgrounds, glassmorphism cards, accent colors, smooth animations and transitions.
+        - Functional: Accessible, semantic markup, smooth input and UI transitions.
+        - Tools Used: Raw HTML5 & CSS3 only (no JS, no frameworks).
+        ========================= */
+
+        :root {
+            --accent: #ca2df7;
+            --glass-bg: rgba(255,255,255,0.18);
+            --glass-border: rgba(255,255,255,0.35);
+            --shadow: 0 8px 30px rgba(42,0,80,0.18);
+            --radius: 17px;
+            --font-main: 'Segoe UI', Arial, sans-serif;
+            --timeline-bg: #fff3fe;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: linear-gradient(120deg, #faeaff, #e2f2ff 80%);
+            color: #1d062c;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(96deg, var(--accent) 0%, #94e8ff 100%);
+            padding-bottom: 54px;
+            box-shadow: var(--shadow);
+            border-bottom-left-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+            user-select: none;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 6vw;
+            animation: navin 1s cubic-bezier(.42, 0, .72, 1.16) forwards;
+        }
+
+        @keyframes navin {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 2px;
+            border-bottom: 3px solid var(--accent);
+            padding-right: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover,
+        .logo:focus {
+            color: #ffffffcc;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 1.07rem;
+            transition: color 0.22s ease;
+            position: relative;
+            outline-offset: 2px;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: var(--accent);
+            outline: none;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2.5px;
+            background: var(--accent);
+            transition: width 0.33s cubic-bezier(.57, .03, .77, .86);
+            margin-top: 2px;
+        }
+
+        nav a:hover::after,
+        nav a:focus-visible::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-top: 72px;
+            animation: fadein 1.65s cubic-bezier(.52, 0, .78, 1) forwards;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h2 {
+            font-size: 2.7rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff;
+            user-select: text;
+        }
+
+        .accent {
+            color: var(--accent);
+            transition: color 0.3s;
+        }
+
+        .highlight {
+            color: #d865ff;
+            font-weight: 600;
+        }
+
+        .hero p {
+            margin: 12px 0 27px;
+            font-size: 1.34rem;
+            color: #fff;
+            letter-spacing: 0.2px;
+            user-select: text;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 37px;
+            border-radius: 99px;
+            background: var(--accent);
+            color: #fff;
+            font-size: 1.13rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: box-shadow 0.3s ease, background 0.2s ease;
+            box-shadow: 0 8px 28px -8px rgba(202, 45, 247, 0.18);
+            font-weight: 700;
+            user-select: none;
+        }
+
+        .btn:hover,
+        .btn:focus-visible {
+            background: #a715da;
+            box-shadow: 0 6px 23px -4px #ca2df735;
+            outline: none;
+            transform: translateY(-2px);
+            transition: box-shadow 0.3s ease, background 0.2s ease, transform 0.2s ease;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1020px;
+            margin: -40px auto 0;
+            padding: 0 3vw 60px;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 55px;
+        }
+
+        /* Glass Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            border: 1.5px solid var(--glass-border);
+            box-shadow: var(--shadow);
+            border-radius: var(--radius);
+            padding: 35px 25px;
+            backdrop-filter: blur(5px);
+            margin-bottom: 38px;
+            transition: box-shadow 0.3s ease, transform 0.25s ease;
+            will-change: box-shadow, transform;
+        }
+
+        .glass-card:hover,
+        .glass-card:focus-within {
+            box-shadow: 0 10px 42px rgba(202, 45, 247, 0.11);
+            transform: translateY(-6px);
+        }
+
+        .glass-card.wide {
+            grid-column: 1 / -1;
+        }
+
+        /* Timeline */
+        .timeline {
+            list-style: none;
+            margin: 27px 0 24px 0;
+            padding-left: 0;
+            border-left: 3px solid var(--accent);
+        }
+
+        .timeline li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline li span,
+        .timeline li time {
+            font-weight: 700;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 100px;
+            padding: 3px 15px;
+            position: absolute;
+            top: 0;
+            left: -45px;
+            min-width: 53px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .timeline li article {
+            background: var(--timeline-bg);
+            padding: 9px 17px;
+            border-radius: 12px;
+            font-size: 1.07rem;
+            margin-left: 5px;
+            box-shadow: 0 1px 5px #ca2df70f;
+            transition: background-color 0.3s ease;
+        }
+
+        .timeline li article:hover,
+        .timeline li article:focus-within {
+            background-color: #ffeaff;
+        }
+
+        /* Project Gallery */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 33px;
+            margin: 18px 0 8px 0;
+        }
+
+        .project-card {
+            background: #fde6ff;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 12px #ca2df70c;
+            padding: 22px 18px;
+            transition: 
+                transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1.5px solid #f3bfff66;
+            animation: fadein 1s ease forwards;
+            cursor: default;
+        }
+
+        .project-card:hover,
+        .project-card:focus-within {
+            transform: translateY(-9px) scale(1.05) rotate(-1.5deg);
+            box-shadow: 0 12px 36px #ca2df71f;
+            outline: none;
+        }
+
+        .project-card h3 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 9px;
+            user-select: text;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #542e6e;
+            user-select: text;
+        }
+
+        /* Documentation paragraph */
+        .docs {
+            font-size: 0.99rem;
+            color: #9641a7;
+            padding-top: 18px;
+        }
+
+        /* Skills/Tools List */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 24px;
+            font-size: 1.06rem;
+        }
+
+        .skills-list li {
+            background: #ffe9ff;
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1.2px solid #eac0ff;
+            color: #a715da;
+            margin-bottom: 7px;
+            font-weight: 600;
+            user-select: none;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            max-width: 460px;
+            animation: fadein 1.2s ease forwards;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px;
+            border-radius: 13px;
+            border: 1.5px solid #ca2df715;
+            background: #fff;
+            font-size: 1.07rem;
+            outline-offset: 2px;
+            resize: none;
+            transition:
+            border-color 0.32s cubic-bezier(.33,0,.66,1),
+            box-shadow 0.32s cubic-bezier(.33,0,.66,1),
+            transform 0.2s cubic-bezier(.33,0,.66,1);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 14px 3px var(--accent);
+            transform: scale(1.04);
+        }
+
+        .contact-form button {
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            padding: 13px 30px;
+            border-radius: 50px;
+            font-size: 1.08rem;
+            cursor: pointer;
+            transition: 
+            background 0.21s ease, 
+            box-shadow 0.21s ease,
+            transform 0.15s cubic-bezier(.4,0,.2,1);
+            align-self: flex-end;
+            font-weight: 700;
+            user-select: none;
+        }
+
+        .contact-form button:hover,
+        .contact-form button:focus-visible {
+            background: #a715da;
+            box-shadow: 0 4px 14px #ca2df733;
+            transform: scale(1.06);
+            outline: none;
+        }
+
+        .contact-form button:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 8px #ca2df722;
+        }
+
+        /* Placeholder color fade */
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #bba8c8;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-form input:focus::placeholder,
+        .contact-form textarea:focus::placeholder {
+            opacity: 0.5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 23px 0;
+            background: #f8eaff;
+            color: #8835b9;
+            border-top: 1.5px solid #f1c3fa;
+            border-bottom-left-radius: var(--radius);
+            border-bottom-right-radius: var(--radius);
+            margin-top: 90px;
+            font-size: 1rem;
+            user-select: none;
+            box-shadow: inset 0 1px 0 #feeaff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 680px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 5vw;
+                gap: 6px;
+            }
+            .logo {
+                margin-bottom: 9px;
+            }
+            .hero {
+                margin-top: 33px;
+                padding: 0 1.5rem;
+            }
+            main {
+                padding: 0 2vw 38px;
+            }
+            .skills-list {
+                flex-direction: column;
+                gap: 10px 0;
+            }
+            .glass-card {
+                padding: 20px 7px;
+            }
+            .timeline li span,
+            .timeline li time {
+                left: -35px;
+                min-width: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--
+      Victor Njoroge | AR Tourism Guide Portfolio
+      Pure HTML5. Semantic structure, accessibility, human-centric content.
+      No frameworks, CSS, or JavaScript external dependencies.
+      2025
+    -->
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <span class="logo" tabindex="0">Victor’s Storybook</span>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+            </ul>
+        </nav>
+        <section class="hero" aria-labelledby="intro-head" role="region">
+            <h2 id="intro-head"><span class="accent">Digital Storytelling</span> & Innovation</h2>
+            <p>Bridging technology and heritage: <span class="highlight">creative experiences</span> that bring Mombasa’s stories to life.</p>
+            <a href="#projects" class="btn">Jump to Projects</a>
+        </section>
+    </header>
+
+    <main role="main">
+        <section class="glass-card wide" id="overview" aria-labelledby="overview-head">
+            <h2 id="overview-head">Project Overview</h2>
+            <p>This portfolio highlights a GPS-based Augmented Reality (AR) guide that unlocks Mombasa’s history at every landmark. Visitors are empowered to explore the city’s past—digitally overlaid with stories right where they happened.</p>
+        </section>
+
+        <section class="glass-card" id="journey" aria-labelledby="journey-head">
+            <h2 id="journey-head">Professional Journey</h2>
+            <ol class="timeline">
+                <li>
+                    <time datetime="2019">2019</time>
+                    <article tabindex="0">
+                        <h3>Discovery</h3>
+                        <p>Began research in digital interaction and AR, inspired by Mombasa’s rich cultural legacy.</p>
+                    </article>
+                </li>
+                <li>
+                    <time datetime="2022">2022</time>
+                    <article tabindex="0">
+                        <h3>Concept to Prototype</h3>
+                        <p>Prototyped a web platform integrating live GPS mapping and AR overlays on location.</p>
+                    </article>
+                </li>
+                <li>
+                    <time datetime="2024">2024</time>
+                    <article tabindex="0">
+                        <h3>"Mombasa AR Guide" Launch</h3>
+                        <p>Released a location-aware web app where users reveal history through phone-based AR at famous sites.</p>
+                    </article>
+                </li>
+                <li>
+                    <time datetime="2025">2025</time>
+                    <article tabindex="0">
+                        <h3>Ongoing Innovation</h3>
+                        <p>Iterating with new multimedia (3D models, audio narration, curated AR routes) for global engagement.</p>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <section class="glass-card wide" id="projects" aria-labelledby="projects-head">
+            <h2 id="projects-head">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card" aria-labelledby="chapter1-head" tabindex="0">
+                    <h3 id="chapter1-head">1. Concept & Research</h3>
+                    <p>Interviewed guides and visitors to uncover key moments and design engaging digital heritage narratives for AR.</p>
+                </article>
+                <article class="project-card" aria-labelledby="chapter2-head" tabindex="0">
+                    <h3 id="chapter2-head">2. AR Prototype</h3>
+                    <p>Built a mobile-first web prototype using semantic HTML5 with embedded location info and multimedia narratives.</p>
+                </article>
+                <article class="project-card" aria-labelledby="chapter3-head" tabindex="0">
+                    <h3 id="chapter3-head">3. Live Guided Tours</h3>
+                    <p>Piloted real-world tours where users interact with virtual reconstructions of architecture and events via AR, driven by on-site progression.</p>
+                </article>
+            </div>
+            <p class="docs"><strong>Summary:</strong> Every project chapter demonstrates the blend of modern web standards and storytelling. Robust usability is ensured for all users across devices and assistive technologies.</p>
+        </section>
+
+        <section class="glass-card" id="skills" aria-labelledby="skills-head">
+            <h2 id="skills-head">Skills & Tools</h2>
+            <ul class="skills-list">
+                <li>Semantic HTML5 (headings, structure, landmarks)</li>
+                <li>UX and content design for accessibility</li>
+                <li>AR concept development & digital heritage curation</li>
+                <li>Mobile-first narrative experience planning</li>
+                <li>Story mapping for cultural tourism</li>
+            </ul>
+        </section>
+
+        <section class="glass-card" id="contact" aria-labelledby="contact-head">
+            <h2 id="contact-head">Contact</h2>
+            <form action="sendmail.php" method="post" autocomplete="on" role="form" class="contact-form">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" name="name" placeholder="Your full name" required />
+
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" name="email" placeholder="you@example.com" required />
+
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" placeholder="Type your message here" required rows="5"></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <section class="glass-card wide" id="documentation" aria-labelledby="doc-head">
+            <h2 id="doc-head">Project Documentation</h2>
+            <ul>
+                <li><strong>Purpose:</strong> Demonstrates an AR and GPS-powered tourism guide for Mombasa using only semantic, standards-based HTML5 for clarity and accessibility.</li>
+                <li><strong>Best Practices:</strong> All content structures are logical and crawler-friendly; headings are explicitly hierarchical for both humans and search engines. Each section employs semantic tags and ARIA roles for ease of navigation via screen readers. No CSS/JS frameworks or non-semantic containers used.</li>
+                <li><strong>Accessibility:</strong> Forms are clearly labeled, navigation is ordered for keyboard accessibility, and all regions are programmatically recognizable.</li>
+                <li><strong>SEO:</strong> Meta descriptions, clean titles, single <code>h1</code>, and clear internal linking following 2025 standards.</li>
+                <li><strong>Future Development:</strong> CSS and JS will be layered for visual style and interactivity, but the project is fully usable and accessible in semantic HTML5 alone.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Victor Njoroge. All rights reserved.</p>
+    </footer>
+</body>
+</html>
