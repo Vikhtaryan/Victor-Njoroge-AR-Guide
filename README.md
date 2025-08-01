@@ -34,16 +34,6 @@ git clone https://github.com/Vikhtaryan/Victor-s-Story-Book.git
 - Access your live site at `https://vikhtaryan.github.io/Victor-s-Story-Book/`.
 
 ---
-
-## Screenshots
-
-*Add screenshots by placing images inside a `/screenshots` folder and referencing them below:*
-
-![Hero Section](./screenshots/hero-section.png)  
-![Project Cards](./screenshots/projects-grid.png)
-
----
-
 ## Technologies Used
 
 - **HTML5:** Semantic layout, accessibility, ARIA roles.
