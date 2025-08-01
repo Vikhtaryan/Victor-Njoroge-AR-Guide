@@ -1,10 +1,24 @@
 # Victor Njoroge | AR Tourism Guide Portfolio
 
-## Live Demo
+[![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+[![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![License](https://img.shields.io/badge/License-Educational-blue)]()
 
-Experience the fully functional portfolio live in your browser. Explore the interactive AR tourism guide showcasing Mombasa’s heritage without any local setup or installation.
+**Live Demo:** [https://vikhtaryan.github.io/Victor-s-Story-Book/](https://vikhtaryan.github.io/Victor-s-Story-Book/)
 
-[View Live Demo here](https://vikhtaryan.github.io/Victor-s-Story-Book)
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Screenshots](#screenshots)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Author](#author)
+- [License](#license)
+- [Additional Notes](#additional-notes)
 
 ---
 
@@ -31,13 +45,26 @@ Built entirely with semantic HTML5 and creative CSS3 glassmorphism styling, this
 
 1. **Clone this repository:**
 git clone https://github.com/Vikhtaryan/Victor-s-Story-Book.git
+
+
 2. **Open the `index.html` file in a modern browser** to explore the portfolio.
+
 3. **To deploy via GitHub Pages:**
-- Push your code to GitHub.
-- In repository settings, enable GitHub Pages from the `main` branch root.
-- Access your live site at `https://vikhtaryan.github.io/Victor-s-Story-Book/`.
+   - Push your code to GitHub.
+   - In repository settings, enable GitHub Pages from the `main` branch root.
+   - Access your live site at `https://vikhtaryan.github.io/Victor-s-Story-Book/`.
 
 ---
+
+## Screenshots
+
+*Add screenshots by placing images inside a `/screenshots` folder and referencing them below:*
+
+![Hero Section](./screenshots/hero-section.png)  
+![Project Cards](./screenshots/projects-grid.png)
+
+---
+
 ## Technologies Used
 
 - **HTML5:** Semantic layout, accessibility, ARIA roles.
