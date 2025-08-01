@@ -60,8 +60,9 @@ git clone https://github.com/Vikhtaryan/Victor-s-Story-Book.git
 
 *Add screenshots by placing images inside a `/screenshots` folder and referencing them below:*
 
-![Hero Section](./screenshots/hero-section.png)  
-![Project Cards](./screenshots/projects-grid.png)
+![Hero Section](./screenshots/hero-section.png)
+![Navigation Bar](./screenshots/navigation-bar.png)
+
 
 ---
 
