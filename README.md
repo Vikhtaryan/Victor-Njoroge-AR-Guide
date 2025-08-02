@@ -4,7 +4,7 @@
 [![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![License](https://img.shields.io/badge/License-Educational-blue)]()
 
-**Live Demo:** [https://vikhtaryan.github.io/Victor-s-Story-Book/](https://vikhtaryan.github.io/Victor-s-Story-Book/)
+**Live Demo:** [https://vikhtaryan.github.io/Victor-Njoroge-AR-Guide/](https://vikhtaryan.github.io/Victor-Njoroge-AR-Guide/)
 
 ---
 
@@ -103,5 +103,6 @@ Feel free to view, learn from, or adapt with proper attribution.
 
 Thank you for visiting my portfolio!  
 If you wish to connect, collaborate, or inquire, please use the contact form or reach out via email.
+
 
 
